@@ -13,3 +13,7 @@ var myvar = "my value";
   var myvar = "local value";
 })();
 ```
+- Object attributes are not protected in `const` declarations, so the following statement is executed without problems.
+
+const MY_OBJECT = {"key": "value"};
+MY_OBJECT.key = "otherValue";
