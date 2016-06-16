@@ -14,10 +14,10 @@ var myvar = "my value";
 })();
 ```
 - Object attributes are not protected in `const` declarations, so the following statement is executed without problems.
-
+```
 const MY_OBJECT = {"key": "value"};
 MY_OBJECT.key = "otherValue";
-
+```
 - In expressions involving numeric and string values with the + operator, JavaScript converts numeric values to strings. For example, consider the following statements:
 ```
 x = "The answer is " + 42 // "The answer is 42"
@@ -30,3 +30,9 @@ In statements involving other operators, JavaScript does not convert numeric val
 "37" - 7 // 30
 "37" + 7 // "377"
 ```
+
+- An alternative method of retrieving a number from a string is with the + (unary plus) operator:
+
+"1.1" + "1.1" = "1.11.1"
+(+"1.1") + (+"1.1") = 2.2   
+// Note: the parentheses are added for clarity, not required.
