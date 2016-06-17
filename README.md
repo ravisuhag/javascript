@@ -70,7 +70,7 @@ JavaScript style guide
 
 - Difference between a `for...of` loop and a `for...in` loop. While `for...in` iterates over property names, `for...of` iterates over property values:
 
- ```
+ ``` js
   let arr = [3, 5, 7];
   arr.foo = "hello";
 
@@ -83,7 +83,7 @@ JavaScript style guide
   }
  ```
 - Recursion itself uses a stack: the function stack. The stack-like behavior can be seen in the following example:
- ```
+ ``` js
   function foo(i) {
     if (i < 0)
       return;
@@ -106,7 +106,7 @@ JavaScript style guide
  ```
 - Nested function is a closure, this means that a nested function can "inherit" the arguments and variables of its containing function.
  
- ```
+ ``` js
   function addSquares(a,b) {
    function square(x) {
      return x * x;
