@@ -23,8 +23,8 @@ MY_OBJECT.key = "otherValue";
 x = "The answer is " + 42 // "The answer is 42"
 y = 42 + " is the answer" // "42 is the answer"
 ```
-In statements involving other operators, JavaScript does not convert numeric values to strings. For example:
 
+- In statements involving other operators, JavaScript does not convert numeric values to strings. For example:
 
 ```
 "37" - 7 // 30
@@ -32,12 +32,13 @@ In statements involving other operators, JavaScript does not convert numeric val
 ```
 
 - An alternative method of retrieving a number from a string is with the + (unary plus) operator:
-
+```
 "1.1" + "1.1" = "1.11.1"
 (+"1.1") + (+"1.1") = 2.2   
 // Note: the parentheses are added for clarity, not required.
+```
 
-If the finally block returns a value, this value becomes the return value of the entire try-catch-finally production, regardless of any return statements in the try and catch blocks:
+- If the finally block returns a value, this value becomes the return value of the entire try-catch-finally production, regardless of any return statements in the try and catch blocks:
 
 ```
 function f() {
@@ -61,6 +62,7 @@ f(); // console 0, 1, 3; returns false
 ```
 
 - Fifference between a for...of loop and a for...in loop. While for...in iterates over property names, for...of iterates over property values:
+
 ```
 let arr = [3, 5, 7];
 arr.foo = "hello";
