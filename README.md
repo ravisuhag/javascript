@@ -5,6 +5,7 @@ Javascript style guide
 ###Tips
 
 - Because of hoisting, all var statements in a function should be placed as near to the top of the function as possible. This best practice increases the clarity of the code.
+ 
  ```
   var myvar = "my value";
  
@@ -13,12 +14,16 @@ Javascript style guide
    var myvar = "local value";
   })();
  ```
+
 - Object attributes are not protected in `const` declarations, so the following statement is executed without problems.
+ 
  ```
   const MY_OBJECT = {"key": "value"};
   MY_OBJECT.key = "otherValue";
  ```
-- In expressions involving numeric and string values with the + operator, JavaScript converts numeric values to strings. For example, consider the following statements:
+
+- In expressions involving numeric and string values with the `+` operator, JavaScript converts numeric values to strings. For example, consider the following statements:
+ 
  ```
   x = "The answer is " + 42 // "The answer is 42"
   y = 42 + " is the answer" // "42 is the answer"
@@ -29,9 +34,10 @@ Javascript style guide
  ```
   "37" - 7 // 30
   "37" + 7 // "377"
+  
  ```
 
-- An alternative method of retrieving a number from a string is with the + (unary plus) operator:
+- An alternative method of retrieving a number from a string is with the `+` (unary plus) operator:
 
  ```
   "1.1" + "1.1" = "1.11.1"
@@ -62,7 +68,7 @@ Javascript style guide
   f(); // console 0, 1, 3; returns false
  ```
 
-- Difference between a for...of loop and a for...in loop. While for...in iterates over property names, for...of iterates over property values:
+- Difference between a `for...of` loop and a `for...in` loop. While `for...in` iterates over property names, `for...of` iterates over property values:
 
  ```
   let arr = [3, 5, 7];
@@ -111,3 +117,4 @@ Javascript style guide
  b = addSquares(3,4); // returns 25
  c = addSquares(4,5); // returns 41
  ```
+- `this` variable is very tricky in closures. They have to be used carefully, as what this refers to depends completely on where the function was called, rather than where it was defined.
