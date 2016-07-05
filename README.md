@@ -108,13 +108,13 @@ JavaScript style guide
  
  ``` js
   function addSquares(a,b) {
-   function square(x) {
-     return x * x;
-   }
-   return square(a) + square(b);
- }
- a = addSquares(2,3); // returns 13
- b = addSquares(3,4); // returns 25
- c = addSquares(4,5); // returns 41
+    function square(x) {
+      return x * x;
+    }
+    return square(a) + square(b);
+  }
+  a = addSquares(2,3); // returns 13
+  b = addSquares(3,4); // returns 25
+  c = addSquares(4,5); // returns 41
  ```
 - `this` variable is very tricky in closures. They have to be used carefully, as what this refers to depends completely on where the function was called, rather than where it was defined.
